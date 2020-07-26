@@ -1,0 +1,33 @@
+{
+  "name": "create-app-cli",
+  "version": "0.0.1",
+  "description": "快速创建应用脚手架",
+  "author": "a-stephen-w",
+  "license": "ISC",
+  "bin": {
+    "create-app-cli": "src/index.js",
+    "rac": "src/index.js"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js create test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoguang/create-app-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yoguang/create-app-cli/issues"
+  },
+  "homepage": "https://github.com/yoguang/create-app-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "download-git-repo": "^1.0.2",
+    "handlebars": "^4.0.11",
+    "inquirer": "^6.0.0",
+    "log-symbols": "^2.2.0",
+    "ora": "^2.1.0"
+  }
+}

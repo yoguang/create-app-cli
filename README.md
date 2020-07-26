@@ -1,2 +1,2 @@
 # create-app-cli
-创建应用脚手架
+快速创建基于现代化框架构建的应用，React、Vue、Svelte等
