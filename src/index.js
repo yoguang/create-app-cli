@@ -7,6 +7,7 @@ const inquirer = require('inquirer');
 const ora = require('ora');
 const chalk = require('chalk');
 const symbols = require('log-symbols');
+const { version } = require('../package.json');
 
 const prompts = [
   {
@@ -49,18 +50,19 @@ function downloadFulfil(name, answers) {
   console.log(symbols.success, chalk.green('项目初始化完成'));
 }
 
-program.version('0.0.1', '-V, --version')
+const gitUrls = {
+  vue: 'https://github.com:yoguang/vue-template#v0.0.1',
+  react: 'https://github.com:yoguang/react-webpack-base#v0.0.1',
+  svelte: 'https://github.com:yoguang/svelte-template#v0.0.1'
+};
+
+program.version(version, '-V, --version')
   .command('create <name>')
   .action((name) => {
     if (!fs.existsSync(name)) {
       inquirer.prompt(prompts).then((answers) => {
         const spinner = ora('正在下载模板...');
         spinner.start();
-        const gitUrls = {
-          vue: 'https://github.com:yoguang/vue-template#v0.0.1',
-          react: 'https://github.com:yoguang/react-webpack-base#v0.0.1',
-          svelte: 'https://github.com:yoguang/svelte-template#v0.0.1'
-        };
         download(gitUrls[answers.frame], name, { clone: true }, (err) => {
           if (err) {
             spinner.fail();

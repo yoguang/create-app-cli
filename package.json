@@ -6,12 +6,12 @@
   "license": "ISC",
   "bin": {
     "create-app-cli": "src/index.js",
-    "rac": "src/index.js"
+    "cac": "src/index.js"
   },
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js create test"
+    "dev": "node src/index.js create test",
+    "link": "npm link"
   },
   "repository": {
     "type": "git",
