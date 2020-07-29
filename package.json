@@ -1,11 +1,11 @@
 {
-  "name": "create-app-cli",
+  "name": "@yoguang/cli",
   "version": "0.0.1",
   "description": "快速创建应用脚手架",
   "author": "a-stephen-w",
   "license": "ISC",
   "bin": {
-    "create-app-cli": "src/index.js",
+    "create-app": "src/index.js",
     "cac": "src/index.js"
   },
   "main": "src/index.js",
