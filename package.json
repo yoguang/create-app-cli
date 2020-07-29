@@ -1,12 +1,11 @@
 {
   "name": "@yoguang/cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "快速创建应用脚手架",
   "author": "a-stephen-w",
   "license": "ISC",
   "bin": {
-    "create-app": "src/index.js",
-    "cac": "src/index.js"
+    "create-app": "src/index.js"
   },
   "main": "src/index.js",
   "scripts": {

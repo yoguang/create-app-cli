@@ -57,7 +57,7 @@ const gitUrls = {
 };
 
 program.version(version, '-V, --version')
-  .command('create <name>')
+  .command('init <name>')
   .action((name) => {
     if (!fs.existsSync(name)) {
       inquirer.prompt(prompts).then((answers) => {
